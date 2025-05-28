@@ -22,7 +22,7 @@ const client = generateClient({
 });
 
 export default function App() {
-  const [userprofiles, setUserProfiles] = useState([]);
+  const [userProfiles, setUserProfiles] = useState([]);
   const { signOut } = useAuthenticator((context) => [context.user]);
 
   useEffect(() => {
@@ -54,7 +54,7 @@ export default function App() {
         gap="2rem"
         alignContent="center"
       >
-        {userprofiles.map((userprofile) => (
+        {userProfiles.map((userprofile) => (
           <Flex
             key={userprofile.id || userprofile.email}
             direction="column"
